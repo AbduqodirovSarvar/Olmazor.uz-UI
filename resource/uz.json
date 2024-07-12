@@ -1,15 +1,20 @@
 {
-    "head.title": "OlmaTech",
-    "navbar.title1": "Olma",
-    "navbar.title2": "Tech",
-    "navbar.home": "Bosh sahifa",
-    "navbar.services": "Xizmatlar",
-    "navbar.projects": "Loyihalar",
-    "navbar.about": "Biz haqimizda",
-    "navbar.testimony": "Fikrlar",
-    "navbar.blog": "Blog",
-    "navbar.contact": "Bog'lanish",
-    "navbar.language": "O'zbekcha",
-    "home.welcome": "OlmaTech ga xush kelibsiz"
+  "head": {
+      "title": "OlmaTech"
+  },
+  "home": {
+      "welcome": "OlmaTech-ga xush kelibsiz"
+  },
+  "navbar": {
+      "title1": "OlmaTech",
+      "title2": "OlmaTech",
+      "home": "Bosh sahifa",
+      "services": "Xizmatlar",
+      "projects": "Loyihalar",
+      "about": "Biz haqimizda",
+      "clients": "Mijozlar",
+      "blog": "Blog",
+      "contact": "Aloqa",
+      "language": "O'zbekcha"
   }
-  
+}

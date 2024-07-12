@@ -1,15 +1,20 @@
 {
-    "head.title": "OlmaTech",
-    "navbar.title1": "Olma",
-    "navbar.title2": "Tech",
-    "navbar.home": "Главная",
-    "navbar.services": "Услуги",
-    "navbar.projects": "Проекты",
-    "navbar.about": "О нас",
-    "navbar.testimony": "Отзывы",
-    "navbar.blog": "Блог",
-    "navbar.contact": "Контакты",
-    "navbar.language": "Русский",
-    "home.welcome": "Добро пожаловать в OlmaTech"
+  "head": {
+      "title": "OlmaTech"
+  },
+  "home": {
+      "welcome": "Добро пожаловать в OlmaTech"
+  },
+  "navbar": {
+      "title1": "OlmaTech",
+      "title2": "OlmaTech",
+      "home": "Главная",
+      "services": "Услуги",
+      "projects": "Проекты",
+      "about": "О нас",
+      "clients": "Клиенты",
+      "blog": "Блог",
+      "contact": "Контакты",
+      "language": "Русский"
   }
-  
+}

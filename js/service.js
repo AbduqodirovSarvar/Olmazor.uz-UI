@@ -1,6 +1,5 @@
-async function createServicesSection() {
-    // Example data, replace this with your actual API call
-    const data = await fetchServicesData();
+function createServicesSection() {
+    let services = OlmaTechData.services;
 
     // Create the section element
     const section = document.createElement('section');
@@ -35,7 +34,7 @@ async function createServicesSection() {
     tabContent.className = 'tab-content pl-md-5';
     tabContent.id = 'v-pills-tabContent';
 
-    data.forEach((item, index) => {
+    services.forEach((item, index) => {
         const isActive = index === 0 ? 'active' : '';
 
         // Create nav link
@@ -89,79 +88,9 @@ async function createServicesSection() {
     return section;
 }
 
-// Example function to fetch data (replace with actual API call)
-async function fetchServicesData() {
-    // Example data, replace this with your API call
-    return [
-        {
-            title: "Business Strategy",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur",
-            details: "Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae deserunt qui nihil ea, tempore et quam natus quaerat doloremque.",
-            icon: "flaticon-ideas",
-            link: "#"
-        },
-        {
-            title: "Research",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur",
-            details: "Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae deserunt qui nihil ea, tempore et quam natus quaerat doloremque.",
-            icon: "flaticon-flasks",
-            link: "#"
-        },
-        {
-            title: "Data Analysis",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur",
-            details: "Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae deserunt qui nihil ea, tempore et quam natus quaerat doloremque.",
-            icon: "flaticon-analysis",
-            link: "#"
-        },
-        {
-            title: "UI Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur",
-            details: "Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae deserunt qui nihil ea, tempore et quam natus quaerat doloremque.",
-            icon: "flaticon-web-design",
-            link: "#"
-        },
-        {
-            title: "UX Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur",
-            details: "Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae deserunt qui nihil ea, tempore et quam natus quaerat doloremque.",
-            icon: "flaticon-ux-design",
-            link: "#"
-        },
-        {
-            title: "Technology",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur",
-            details: "Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae deserunt qui nihil ea, tempore et quam natus quaerat doloremque.",
-            icon: "flaticon-innovation",
-            link: "#"
-        },
-        {
-            title: "Creative Solution",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur",
-            details: "Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae deserunt qui nihil ea, tempore et quam natus quaerat doloremque.",
-            icon: "flaticon-idea",
-            link: "#"
-        },
-        {
-            title: "Creative Solution",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur",
-            details: "Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae deserunt qui nihil ea, tempore et quam natus quaerat doloremque.",
-            icon: "flaticon-idea",
-            link: "#"
-        },
-        {
-            title: "Creative Solution",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur",
-            details: "Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae deserunt qui nihil ea, tempore et quam natus quaerat doloremque.",
-            icon: "flaticon-idea",
-            link: "#"
-        }
-    ];
-}
-
 // Function to render the section in the DOM
 async function renderServicesSection() {
-    const section = await createServicesSection();
+    const section = createServicesSection();
     document.body.appendChild(section); // Append to the body or a specific container
 }
 

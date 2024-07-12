@@ -1,15 +1,30 @@
 {
-    "head.title": "OlmaTech",
-    "navbar.title1": "Olma",
-    "navbar.title2": "Tech",
-    "navbar.home": "Home",
-    "navbar.services": "Services",
-    "navbar.projects": "Projects",
-    "navbar.about": "About",
-    "navbar.clients": "Clients",
-    "navbar.blog": "Blog",
-    "navbar.contact": "Contact",
-    "navbar.language": "English",
-    "home.welcome": "Welcome to OlmaTech"
+  "head": {
+      "title": "OlmaTech"
+  },
+  "home": {
+      "welcome": "Welcome to OlmaTech"
+  },
+  "navbar": {
+      "title1": "OlmaTech",
+      "title2": "OlmaTech",
+      "home": "Home",
+      "services": "Services",
+      "projects": "Projects",
+      "about": "About",
+      "clients": "Clients",
+      "blog": "Blog",
+      "contact": "Contact",
+      "language": "English"
+  },
+  "projects" : {
+    "title": "Our Projects",
+    "subtitle": "Our Projects",
+    "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "About Us",
+    "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"
   }
-  
+}

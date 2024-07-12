@@ -1,6 +1,5 @@
-async function createStaffSection() {
-    // Example data, replace this with your actual API call
-    const data = await fetchStaffData();
+function createStaffSection() {
+    let team = OlmaTechData.team;
 
     // Create the section element
     const section = document.createElement('section');
@@ -18,9 +17,9 @@ async function createStaffSection() {
     const headingCol = document.createElement('div');
     headingCol.className = 'col-md-6 heading-section text-center ftco-animate';
     headingCol.innerHTML = `
-        <span class="subheading">${data.subheading}</span>
-        <h2 class="mb-4">${data.heading}</h2>
-        <p>${data.description}</p>
+        <span class="subheading">${team.subheading}</span>
+        <h2 class="mb-4">${team.heading}</h2>
+        <p>${team.description}</p>
     `;
     
     // Append headingCol to row
@@ -31,7 +30,7 @@ async function createStaffSection() {
     staffRow.className = 'row';
 
     // Loop through staff data and create staff member columns
-    data.staff.forEach(staffMember => {
+    team.staff.forEach(staffMember => {
         const staffCol = document.createElement('div');
         staffCol.className = 'col-md-6 col-lg-3 ftco-animate';
         staffCol.innerHTML = `
@@ -68,25 +67,9 @@ async function createStaffSection() {
     return section;
 }
 
-// Example function to fetch data (replace with actual API call)
-async function fetchStaffData() {
-    // Example data, replace this with your API call
-    return {
-        subheading: "About Us",
-        heading: "Our Staff",
-        description: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia",
-        staff: [
-            { name: "Lloyd Wilson", position: "CEO, Founder", photo: "images/staff-1.jpg" },
-            { name: "Rachel Parker", position: "Web Designer", photo: "images/staff-2.jpg" },
-            { name: "Ian Smith", position: "Web Developer", photo: "images/staff-3.jpg" },
-            { name: "Alicia Henderson", position: "Graphic Designer", photo: "images/staff-4.jpg" }
-        ]
-    };
-}
-
 // Function to render the section in the DOM
 async function renderStaffSection() {
-    const section = await createStaffSection();
+    const section = createStaffSection();
     document.body.appendChild(section); // Append to the body or a specific container
 }
 

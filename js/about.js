@@ -1,6 +1,5 @@
-async function createAboutSection() {
-    // Example data, replace this with your actual API call
-    const data = await fetchAboutData();
+function createAboutSection() {
+    let about = OlmaTechData.about;
 
     // Create the section element
     const section = document.createElement('section');
@@ -22,7 +21,7 @@ async function createAboutSection() {
     // Create the image div
     const imgDiv = document.createElement('div');
     imgDiv.className = 'img d-flex align-self-stretch align-items-center';
-    imgDiv.style.backgroundImage = `url(${data.photo})`;
+    imgDiv.style.backgroundImage = `url(${about.photo})`;
 
     // Append imgDiv to imgCol
     imgCol.appendChild(imgDiv);
@@ -43,11 +42,9 @@ async function createAboutSection() {
     const headingCol = document.createElement('div');
     headingCol.className = 'col-md-12 heading-section ftco-animate';
     headingCol.innerHTML = `
-        <span class="subheading">${data.subheading}</span>
-        <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">${data.title}</h2>
-        <p>${data.description1}</p>
-        <p>${data.description2}</p>
-        <p>${data.description3}</p>
+        <span class="subheading">${about.subheading}</span>
+        <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">${about.title}</h2>
+        <p>${about.description}</p>
     `;
 
     // Append heading column to heading row
@@ -62,7 +59,7 @@ async function createAboutSection() {
     counterText.className = 'text p-4 bg-primary';
     counterText.innerHTML = `
         <p class="mb-0">
-            <span class="number" data-number="${data.yearsOfExperience}">0</span>
+            <span class="number" data-number="${about.yearsOfExperience}">0</span>
             <span>Years of experience</span>
         </p>
     `;
@@ -90,23 +87,9 @@ async function createAboutSection() {
     return section;
 }
 
-// Example function to fetch data (replace with actual API call)
-async function fetchAboutData() {
-    // Example data, replace this with your API call
-    return {
-        photo: "images/about.jpg",
-        subheading: "Welcome to digilab",
-        title: "We Are Digital Agency",
-        description1: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
-        description2: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.",
-        description3: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
-        yearsOfExperience: 20
-    };
-}
-
 // Function to render the section in the DOM
 async function renderAboutSection() {
-    const section = await createAboutSection();
+    const section = createAboutSection();
     document.body.appendChild(section); // Append to the body or a specific container
 }
 

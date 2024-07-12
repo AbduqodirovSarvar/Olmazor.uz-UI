@@ -1,6 +1,6 @@
-async function createProjectsSection() {
+function createProjectsSection() {
     // Example data, replace this with your actual API call
-    const data = await fetchProjectsData();
+    const projects = OlmaTechData.projects;
 
     // Create the section element
     const section = document.createElement('section');
@@ -39,7 +39,7 @@ async function createProjectsSection() {
     const carousel = document.createElement('div');
     carousel.className = 'carousel-project owl-carousel';
 
-    data.forEach(item => {
+    projects.forEach(item => {
         // Create the item div
         const itemDiv = document.createElement('div');
         itemDiv.className = 'item';
@@ -96,56 +96,9 @@ async function createProjectsSection() {
     return section;
 }
 
-// Example function to fetch data (replace with actual API call)
-async function fetchProjectsData() {
-    // Example data, replace this with your API call
-    return [
-        {
-            title: "Project 1",
-            category: "Web Design",
-            photo: "images/project-1.jpg"
-        },
-        {
-            title: "Project 2",
-            category: "Web Design",
-            photo: "images/project-2.jpg"
-        },
-        {
-            title: "Project 3",
-            category: "Web Design",
-            photo: "images/project-3.jpg"
-        },
-        {
-            title: "Project 4",
-            category: "Web Design",
-            photo: "images/project-4.jpg"
-        },
-        {
-            title: "Project 5",
-            category: "Web Design",
-            photo: "images/project-5.jpg"
-        },
-        {
-            title: "Project 6",
-            category: "Web Design",
-            photo: "images/project-6.jpg"
-        },
-        {
-            title: "Project 7",
-            category: "Web Testttststtst",
-            photo: "images/project-6.jpg"
-        },
-        {
-            title: "Project 8",
-            category: "absdkfhansd fb",
-            photo: "images/project-6.jpg"
-        }
-    ];
-}
-
 // Function to render the section in the DOM
 async function renderProjectsSection() {
-    const section = await createProjectsSection();
+    const section = createProjectsSection();
     document.body.appendChild(section); // Append to the body or a specific container
 }
 
