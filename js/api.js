@@ -114,8 +114,8 @@ function dataJsonList(){
                 { "name": "Rachel Parker", "position": "Web Designer", "photo": "images/staff-2.jpg" },
                 { "name": "Ian Smith", "position": "Web Developer", "photo": "images/staff-3.jpg" },
                 { "name": "Alicia Henderson", "position": "Graphic Designer", "photo": "images/staff-4.jpg" },
-                { "name": "James Brown", "position": "Marketing Manager", "photo": "images/staff-5.jpg" },
-                { "name": "Emily Johnson", "position": "SEO Specialist", "photo": "images/staff-6.jpg" }
+                { "name": "James Brown", "position": "Marketing Manager", "photo": "images/staff-4.jpg" },
+                { "name": "Emily Johnson", "position": "SEO Specialist", "photo": "images/staff-4.jpg" }
             ]
         },
         "home": [
@@ -137,6 +137,53 @@ function dataJsonList(){
             "description": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.",
             "photo": "images/bg_1.jpg"
         }
-    ]
-    }   
+        ],
+        "client": {
+            "heading": 'Happy Clients',
+            "people": [
+                {
+                    text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+                    name: 'John Fox',
+                    position: 'Businessman',
+                    image: 'images/person_1.jpg'
+                },
+                {
+                    text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+                    name: 'John Fox',
+                    position: 'Businessman',
+                    image: 'images/person_2.jpg'
+                },
+                {
+                    text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+                    name: 'John Fox',
+                    position: 'Businessman',
+                    image: 'images/person_3.jpg'
+                },
+                {
+                    text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+                    name: 'John Fox',
+                    position: 'Businessman',
+                    image: 'images/person_4.jpg'
+                },
+                {
+                    text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+                    name: 'John Fox',
+                    position: 'Businessman',
+                    image: 'images/person_4.jpg'
+                },
+                {
+                    text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+                    name: 'John Fox',
+                    position: 'Businessman',
+                    image: 'images/person_4.jpg'
+                },
+                {
+                    text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+                    name: 'John Fox',
+                    position: 'Businessman',
+                    image: 'images/person_4.jpg'
+                }
+            ]
+        }
+    }
 }

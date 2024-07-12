@@ -1,6 +1,5 @@
 async function createTestimonySection() {
-    // Example data, replace with your API fetch logic
-    const data = await fetchTestimonyData();
+    let clients = OlmaTechData.client;
 
     // Create section element
     const section = document.createElement('section');
@@ -18,7 +17,7 @@ async function createTestimonySection() {
     // Create heading column
     const headingCol = document.createElement('div');
     headingCol.className = 'col-md-7 text-center heading-section heading-section-white ftco-animate';
-    headingCol.innerHTML = `<h2 class="mb-4">${data.heading}</h2>`;
+    headingCol.innerHTML = `<h2 class="mb-4">${clients.heading}</h2>`;
     
     // Append headingCol to headingRow
     headingRow.appendChild(headingCol);
@@ -32,7 +31,7 @@ async function createTestimonySection() {
     carousel.className = 'carousel-testimony owl-carousel ftco-owl';
 
     // Loop through testimonies data and create testimonies items
-    data.testimonies.forEach(testimony => {
+    clients.people.forEach(testimony => {
         const item = document.createElement('div');
         item.className = 'item';
 
@@ -65,58 +64,6 @@ async function createTestimonySection() {
     section.appendChild(container);
 
     return section;
-}
-
-// Example function to fetch data (replace with actual API call)
-async function fetchTestimonyData() {
-    // Example data, replace with your API call
-    return {
-        heading: 'Happy Clients',
-        testimonies: [
-            {
-                text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-                name: 'John Fox',
-                position: 'Businessman',
-                image: 'images/person_1.jpg'
-            },
-            {
-                text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-                name: 'John Fox',
-                position: 'Businessman',
-                image: 'images/person_2.jpg'
-            },
-            {
-                text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-                name: 'John Fox',
-                position: 'Businessman',
-                image: 'images/person_3.jpg'
-            },
-            {
-                text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-                name: 'John Fox',
-                position: 'Businessman',
-                image: 'images/person_4.jpg'
-            },
-            {
-                text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-                name: 'John Fox',
-                position: 'Businessman',
-                image: 'images/person_4.jpg'
-            },
-            {
-                text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-                name: 'John Fox',
-                position: 'Businessman',
-                image: 'images/person_4.jpg'
-            },
-            {
-                text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-                name: 'John Fox',
-                position: 'Businessman',
-                image: 'images/person_4.jpg'
-            }
-        ]
-    };
 }
 
 // Function to render the section in the DOM
