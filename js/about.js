@@ -1,4 +1,4 @@
-function createAboutSection() {
+function createAboutSection(language) {
     let about = OlmaTechData.about;
 
     // Create the section element
@@ -42,9 +42,9 @@ function createAboutSection() {
     const headingCol = document.createElement('div');
     headingCol.className = 'col-md-12 heading-section ftco-animate';
     headingCol.innerHTML = `
-        <span class="subheading">${about.subheading}</span>
-        <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">${about.title}</h2>
-        <p>${about.description}</p>
+        <span class="subheading" data-i18n="home.welcome"></span>
+        <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">${about.title.en}</h2>
+        <p>${about.description[language]}</p>
     `;
 
     // Append heading column to heading row
@@ -59,7 +59,7 @@ function createAboutSection() {
     counterText.className = 'text p-4 bg-primary';
     counterText.innerHTML = `
         <p class="mb-0">
-            <span class="number" data-number="${about.yearsOfExperience}">0</span>
+            <span class="number" data-number="${about.experience}">0</span>
             <span>Years of experience</span>
         </p>
     `;

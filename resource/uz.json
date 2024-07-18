@@ -16,5 +16,15 @@
       "blog": "Blog",
       "contact": "Aloqa",
       "language": "O'zbekcha"
+  },
+  "projects" : {
+    "title": "Bizning Loyihalar",
+    "subtitle": "Bizning Loyihalar",
+    "description": "Qanaqadir malumotlar"
+  },
+  "about": {
+    "title": "Biz haqimizda",
+    "subtitle": "Biz haqimizda",
+    "description": "Qanaqadr malumotlar"
   }
 }
