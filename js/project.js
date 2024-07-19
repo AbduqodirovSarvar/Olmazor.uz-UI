@@ -19,9 +19,9 @@ function createProjectsSection() {
     const headingCol = document.createElement('div');
     headingCol.className = 'col-md-12 heading-section text-center ftco-animate';
     headingCol.innerHTML = `
-        <span class="subheading">Accomplishments</span>
-        <h2 class="mb-4">Our Projects</h2>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+        <span class="subheading" data-i18n="projects.title">Accomplishments</span>
+        <h2 class="mb-4" data-i18n="projects.subtitle">Our Projects</h2>
+        <p data-i18n="projects.description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
     `;
 
     // Append heading column to heading row
@@ -43,6 +43,7 @@ function createProjectsSection() {
         // Create the item div
         const itemDiv = document.createElement('div');
         itemDiv.className = 'item';
+        i = 0;
 
         // Create the project div
         const projectDiv = document.createElement('div');
@@ -62,8 +63,8 @@ function createProjectsSection() {
         const textDiv = document.createElement('div');
         textDiv.className = 'text px-4';
         textDiv.innerHTML = `
-            <h3><a href="#">${item.title}</a></h3>
-            <span>${item.category}</span>
+            <h3><a data-api="OlmaTechData.projects.name[${i}]">${item.title}</a></h3>
+            <span data-api="OlmaTechData.projects.description[${i}]">${item.category}</span>
         `;
 
         // Append image and text div to img div
@@ -78,6 +79,7 @@ function createProjectsSection() {
 
         // Append item div to carousel
         carousel.appendChild(itemDiv);
+        i++;
     });
 
     // Append carousel to testimonial column

@@ -1,6 +1,7 @@
 {
   "head": {
-      "title": "OlmaTech"
+      "title": "OlmaTech",
+      "menu": "Menu"
   },
   "home": {
       "welcome": "Welcome to OlmaTech"
@@ -20,11 +21,42 @@
   "projects" : {
     "title": "Our Projects",
     "subtitle": "Our Projects",
-    "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"
-  },
+    "description": "Our company has successfully completed numerous projects across various industries, showcasing our expertise and commitment to excellence. From innovative technology solutions to large-scale infrastructure developments, each project in our portfolio demonstrates our ability to deliver high-quality results that exceed client expectations. Explore our completed projects to see the breadth of our experience and the impact of our work."
+  },  
   "about": {
     "title": "About Us",
-    "subtitle": "About Us",
-    "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"
+    "subtitle": "Our Staff",
+    "description": "Our dedicated team of professionals is committed to delivering exceptional service and innovative solutions. With a diverse range of expertise and a passion for excellence, our staff works tirelessly to meet and exceed our clients' expectations. Learn more about the talented individuals who drive our success."
+  },
+  "clients":{
+    "title": "HAPPY CLIENTS"
+  },
+  "blog":{
+    "title": "Our Blog",
+    "subtitle": "Latest News",
+    "description": "Stay updated with the latest news and insights from our company. Our blog features articles on industry trends, project updates, and expert opinions. Discover valuable information and stay connected with our latest developments."
+  },
+  "contact":{
+    "title": "Contact Us",
+    "subtitle": "Get In Touch",
+    "description": "We would love to hear from you! Whether you have a question about our services, need assistance, or just want to provide feedback, feel free to reach out to us. Our team is here to help you.",
+    "address": "Address",
+    "number": "Contact Number",
+    "email": "Email Address",
+    "website": "Website",
+    "telegram": "Telegram",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "footer":{
+    "about": "About us",
+    "links" : "Links",
+    "services": "Services",
+    "questions": "Have a Questions?"
   }
 }

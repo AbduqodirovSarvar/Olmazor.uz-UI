@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(error => {
             console.error('Error fetching addresses:', error);
             // Fallback to default location if fetch fails
-            var map = L.map('map').setView([41.352387, 69.236582], 14);
+            var map = L.map('map').setView([41.35265, 69.237268], 14);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,

@@ -40,18 +40,22 @@ function createHomeSection() {
 
             const text = document.createElement('div');
             text.className = 'text';
+            i = 0;
 
             const subheading = document.createElement('span');
             subheading.className = 'subheading';
-            subheading.textContent = item.subtitle;
+            subheading.textContent = item.subtitle["en"];
+            subheading.setAttribute('data-i18n', `OlmaTechData.home.subtitle[${i}]`);
 
             const h1 = document.createElement('h1');
             h1.className = 'mb-4 mt-3';
             h1.innerHTML = item.title;
+            h1.setAttribute('data-api', `OlmaTechData.home.title[${i}]`);
 
             const p = document.createElement('p');
             p.textContent = item.description;
-
+            p.setAttribute('data-api', `OlmaTechData.home.description[${i}]`);
+            i++;
             text.appendChild(subheading);
             text.appendChild(h1);
             text.appendChild(p);

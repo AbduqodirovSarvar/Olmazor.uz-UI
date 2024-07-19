@@ -17,9 +17,9 @@ function createStaffSection() {
     const headingCol = document.createElement('div');
     headingCol.className = 'col-md-6 heading-section text-center ftco-animate';
     headingCol.innerHTML = `
-        <span class="subheading">${team.subheading}</span>
-        <h2 class="mb-4">${team.heading}</h2>
-        <p>${team.description}</p>
+        <span class="subheading" data-i18n="about.title">${team.subheading}</span>
+        <h2 class="mb-4" data-i18n="about.subtitle">${team.heading}</h2>
+        <p data-i18n="about.description">${team.description}</p>
     `;
     
     // Append headingCol to row

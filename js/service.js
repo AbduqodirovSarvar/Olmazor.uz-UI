@@ -46,6 +46,7 @@ function createServicesSection() {
         navLink.setAttribute('role', 'tab');
         navLink.setAttribute('aria-controls', `v-pills-${index + 1}`);
         navLink.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        navLink.setAttribute('data-api', `OlmaTechData.services.name[${index}]`);
         navLink.innerHTML = `<span class="mr-3 ${item.icon}"></span> ${item.title}`;
 
         // Append nav link to nav
@@ -59,10 +60,8 @@ function createServicesSection() {
         tabPane.setAttribute('aria-labelledby', `v-pills-${index + 1}-tab`);
         tabPane.innerHTML = `
             <span class="icon mb-3 d-block ${item.icon}"></span>
-            <h2 class="mb-4">${item.title}</h2>
-            <p>${item.description}</p>
-            <p>${item.details}</p>
-            <p><a href="${item.link}" class="btn btn-primary px-4 py-3">Learn More</a></p>
+            <h2 class="mb-4" data-api="OlmaTechData.services.name[${index}]">${item.name}</h2>
+            <p data-api="OlmaTechData.services.description[${index}]">${item.description}</p>
         `;
 
         // Append tab pane to tab content

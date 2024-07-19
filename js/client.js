@@ -17,7 +17,7 @@ async function createTestimonySection() {
     // Create heading column
     const headingCol = document.createElement('div');
     headingCol.className = 'col-md-7 text-center heading-section heading-section-white ftco-animate';
-    headingCol.innerHTML = `<h2 class="mb-4">${clients.heading}</h2>`;
+    headingCol.innerHTML = `<h2 class="mb-4" data-i18n="clients.title">${clients.heading}</h2>`;
     
     // Append headingCol to headingRow
     headingRow.appendChild(headingCol);

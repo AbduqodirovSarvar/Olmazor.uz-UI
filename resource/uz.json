@@ -1,6 +1,7 @@
 {
   "head": {
-      "title": "OlmaTech"
+      "title": "OlmaTech",
+      "menu": "Menyu"
   },
   "home": {
       "welcome": "OlmaTech-ga xush kelibsiz"
@@ -18,13 +19,44 @@
       "language": "O'zbekcha"
   },
   "projects" : {
-    "title": "Bizning Loyihalar",
-    "subtitle": "Bizning Loyihalar",
-    "description": "Qanaqadir malumotlar"
+    "title": "Bizning loyihalar",
+    "subtitle": "Bizning loyihalar",
+    "description": "Bizning kompaniya turli sohalarda ko'plab loyihalarni muvaffaqiyatli amalga oshirgan bo'lib, bu bizning tajribamiz va mukammallikka intilishimizni namoyish etadi. Innovatsion texnologik yechimlardan tortib, keng ko'lamli infratuzilma loyihalarigacha, portfelimizdagi har bir loyiha mijozlarimizning kutganidan yuqori sifatli natijalarni taqdim etish qobiliyatimizni ko'rsatadi. Bizning bajarilgan loyihalarimizni ko'rib chiqing va ishimizning keng doirasi va ta'sirini ko'ring."
   },
   "about": {
     "title": "Biz haqimizda",
-    "subtitle": "Biz haqimizda",
-    "description": "Qanaqadr malumotlar"
-  }
+    "subtitle": "Bizning jamoamiz",
+    "description": "Bizning fidokorona ishlaydigan professionallarimiz jamoasi yuqori darajadagi xizmat va innovatsion yechimlarni taqdim etishga sodiqdir. Turli sohalarda tajribaga ega va mukammallikka intilish bilan ishlaydigan jamoamiz mijozlarimizning kutganidan yuqori natijalarni taqdim etish uchun tinimsiz mehnat qiladi. Bizning muvaffaqiyatimizni ta'minlovchi iste'dodli shaxslar haqida ko'proq bilib oling."
+  },
+  "clients":{
+    "title": "HURSAND MIJOZLAR"
+  },
+  "blog":{
+    "title": "Bizning blog",
+    "subtitle": "So'nggi yangiliklar",
+    "description": "Kompaniyamizdan so'nggi yangiliklar va tahlillar bilan xabardor bo'ling. Blogimizda soha tendentsiyalari, loyiha yangilanishlari va ekspert fikrlari haqida maqolalar mavjud. Qimmatli ma'lumotlarni kashf eting va bizning so'nggi yangiliklarimiz bilan aloqada bo'ling."
+  },
+  "contact":{
+    "title": "Biz bilan bog'laning",
+    "subtitle": "Aloqada bo'ling",
+    "description": "Sizdan xabar olishdan mamnun bo'lamiz! Agar xizmatlarimiz haqida savolingiz bo'lsa, yordamga muhtoj bo'lsangiz yoki fikr bildirmoqchi bo'lsangiz, biz bilan bog'laning. Bizning jamoamiz sizga yordam berishga tayyor.",
+    "address": "Manzil",
+    "number": "Aloqa raqami",
+    "email": "Email manzili",
+    "website": "Veb-sayt",
+    "telegram": "Telegram",
+    "form": {
+      "name": "Ismingiz",
+      "email": "Emailingiz",
+      "subject": "Mavzu",
+      "message": "Xabar",
+      "send": "Xabar yuboring"
+    }
+  },  
+  "footer":{
+    "about": "Biz haqimizda",
+    "links": "Havolalar",
+    "services": "Xizmatlar",
+    "questions": "Savollaringiz bormi?"
+  }  
 }

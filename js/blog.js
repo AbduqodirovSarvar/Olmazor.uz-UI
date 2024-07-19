@@ -1,6 +1,6 @@
 async function createBlogSection() {
     // Example data, replace with your API fetch logic
-    const data = await fetchBlogData();
+    const data = OlmaTechData.blogs;
 
     // Create section element
     const section = document.createElement('section');
@@ -19,9 +19,9 @@ async function createBlogSection() {
     const headingCol = document.createElement('div');
     headingCol.className = 'col-md-7 heading-section text-center ftco-animate';
     headingCol.innerHTML = `
-        <span class="subheading">${data.subheading}</span>
-        <h2 class="mb-4">${data.heading}</h2>
-        <p>${data.description}</p>
+        <span class="subheading" data-i18n="blog.title">${data.subheading}</span>
+        <h2 class="mb-4" data-i18n="blog.subtitle">${data.heading}</h2>
+        <p data-i18n="blog.description">${data.description}</p>
     `;
     
     // Append headingCol to headingRow
@@ -30,9 +30,10 @@ async function createBlogSection() {
     // Create row for blog entries
     const blogRow = document.createElement('div');
     blogRow.className = 'row d-flex';
+    i=0;
 
     // Loop through blog entries data and create blog entry items
-    data.entries.forEach(entry => {
+    data.forEach(entry => {
         const col = document.createElement('div');
         col.className = 'col-md-4 d-flex ftco-animate';
 
@@ -49,12 +50,11 @@ async function createBlogSection() {
                             <span class="mos">${entry.date.month}</span>
                         </div>
                     </div>
-                    <h3 class="heading"><a href="${entry.link}">${entry.title}</a></h3>
-                    <p>${entry.excerpt}</p>
+                    <h3 class="heading"><a data-api="OlmaTechData.blogs.title[${i}]>${entry.title}</a></h3>
+                    <p data-api="OlmaTechData.blogs.description[${i}]>${entry.description}</p>
                     <div class="d-flex align-items-center mt-4 meta">
-                        <p class="mb-0"><a href="${entry.link}" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
                         <p class="ml-auto mb-0">
-                            <a href="#" class="mr-2">${entry.author}</a>
+                            <a href="#" class="mr-2"></a>
                         </p>
                     </div>
                 </div>
@@ -62,6 +62,7 @@ async function createBlogSection() {
         `;
 
         blogRow.appendChild(col);
+        i++;
     });
 
     // Append headingRow and blogRow to container
