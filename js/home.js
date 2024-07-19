@@ -13,10 +13,10 @@ function createHomeSection() {
         const homeSlider = document.createElement('div');
         homeSlider.className = 'home-slider js-fullheight owl-carousel';
 
-        home.forEach(item => {
+        home.forEach((item, i) => {
             const sliderItem = document.createElement('div');
             sliderItem.className = 'slider-item js-fullheight';
-            
+
             const overlay = document.createElement('div');
             overlay.className = 'overlay';
 
@@ -40,7 +40,6 @@ function createHomeSection() {
 
             const text = document.createElement('div');
             text.className = 'text';
-            i = 0;
 
             const subheading = document.createElement('span');
             subheading.className = 'subheading';
@@ -49,13 +48,13 @@ function createHomeSection() {
 
             const h1 = document.createElement('h1');
             h1.className = 'mb-4 mt-3';
-            h1.innerHTML = item.title;
+            h1.innerHTML = item.title["en"];
             h1.setAttribute('data-api', `OlmaTechData.home.title[${i}]`);
 
             const p = document.createElement('p');
-            p.textContent = item.description;
+            p.textContent = item.description["en"];
             p.setAttribute('data-api', `OlmaTechData.home.description[${i}]`);
-            i++;
+
             text.appendChild(subheading);
             text.appendChild(h1);
             text.appendChild(p);
@@ -79,12 +78,23 @@ function createHomeSection() {
     }
 }
 
-
 async function renderHomeSection() {
     try {
         const section = createHomeSection();
         document.body.appendChild(section);
-        const savedLanguage = localStorage.getItem("olma-tech-langauge-code") || 'en';
+
+        // Initialize the owl carousel after the section is added to the DOM
+        $('.owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+        });
+
+        const savedLanguage = localStorage.getItem("olma-tech-langauge-code") || 'ru';
         setLanguage(savedLanguage);
     } catch (error) {
         console.error('Error rendering home section:', error);

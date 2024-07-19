@@ -123,7 +123,7 @@ function setLanguage(language) {
 
 // Load the saved language on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem(languageKey) || 'en';
+    const savedLanguage = localStorage.getItem(languageKey) || 'ru';
     setLanguage(savedLanguage);
 
     document.querySelectorAll('.dropdown-item').forEach(item => {
