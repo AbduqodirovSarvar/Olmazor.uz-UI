@@ -16,7 +16,7 @@ function createAboutSection(language) {
 
     const imgDiv = document.createElement('div');
     imgDiv.className = 'img d-flex align-self-stretch align-items-center';
-    imgDiv.style.backgroundImage = `url(${about.photo})`;
+    imgDiv.style.backgroundImage = `url(${baseApiUrl}/File/${about.photo})`;
 
     imgCol.appendChild(imgDiv);
 
@@ -73,4 +73,4 @@ async function renderAboutSection() {
 }
 
 // Call the function to render the section
-renderAboutSection();
+// renderAboutSection();

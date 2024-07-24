@@ -1,5 +1,5 @@
 function createStaffSection() {
-    let team = OlmaTechData.team;
+    let teams = OlmaTechData.teams;
 
     // Create the section element
     const section = document.createElement('section');
@@ -17,9 +17,9 @@ function createStaffSection() {
     const headingCol = document.createElement('div');
     headingCol.className = 'col-md-6 heading-section text-center ftco-animate';
     headingCol.innerHTML = `
-        <span class="subheading" data-i18n="about.title">${team.subheading}</span>
-        <h2 class="mb-4" data-i18n="about.subtitle">${team.heading}</h2>
-        <p data-i18n="about.description">${team.description}</p>
+        <span class="subheading" data-i18n="about.title"></span>
+        <h2 class="mb-4" data-i18n="about.subtitle"></h2>
+        <p data-i18n="about.description"></p>
     `;
     
     // Append headingCol to row
@@ -28,20 +28,21 @@ function createStaffSection() {
     // Create a row for staff members
     const staffRow = document.createElement('div');
     staffRow.className = 'row';
-
+    i=0;
     // Loop through staff data and create staff member columns
-    team.staff.forEach(staffMember => {
+    teams.forEach(staffMember => {
         const staffCol = document.createElement('div');
         staffCol.className = 'col-md-6 col-lg-3 ftco-animate';
+        console.log(`url(${baseApiUrl}/File/${staffMember.photo})`);
         staffCol.innerHTML = `
             <div class="staff">
                 <div class="img-wrap d-flex align-items-stretch">
-                    <div class="img align-self-stretch" style="background-image: url(${staffMember.photo});"></div>
+                    <div class="img align-self-stretch" style="background-image: url(${baseApiUrl}/File/${staffMember.photo});"></div>
                 </div>
                 <div class="text d-flex align-items-center pt-3 text-center">
                     <div>
-                        <h3 class="mb-2">${staffMember.name}</h3>
-                        <span class="position mb-4">${staffMember.position}</span>
+                        <h3 class="mb-2" data-api="OlmaTechData.teams.firstname[${i}]">${staffMember.name}</h3>
+                        <span class="position mb-4" data-api="OlmaTechData.teams.position[${i}]">${staffMember.position}</span>
                         <div class="faded">
                             <ul class="ftco-social text-center">
                                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -55,6 +56,7 @@ function createStaffSection() {
             </div>
         `;
         staffRow.appendChild(staffCol);
+        i++;
     });
 
     // Append staffRow to container
@@ -74,4 +76,4 @@ async function renderStaffSection() {
 }
 
 // Call the function to render the section
-renderStaffSection();
+// renderStaffSection();

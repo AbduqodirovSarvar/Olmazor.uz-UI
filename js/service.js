@@ -94,4 +94,4 @@ async function renderServicesSection() {
 }
 
 // Call the function to render the section
-renderServicesSection();
+// renderServicesSection();

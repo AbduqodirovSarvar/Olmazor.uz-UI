@@ -73,4 +73,4 @@ async function renderTestimonySection() {
 }
 
 // Call the function to render the section
-renderTestimonySection();
+// renderTestimonySection();

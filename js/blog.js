@@ -39,7 +39,7 @@ async function createBlogSection() {
 
         col.innerHTML = `
             <div class="blog-entry justify-content-end">
-                <a href="${entry.link}" class="block-20" style="background-image: url('${entry.image}');"></a>
+                <a href="${entry.link}" class="block-20" style="background-image: url('${baseApiUrl}/File/${entry.photo}');"></a>
                 <div class="text mt-3 float-right d-block">
                     <div class="d-flex align-items-center pt-2 mb-4 topp">
                         <div class="one mr-2">
@@ -121,4 +121,4 @@ async function renderBlogSection() {
 }
 
 // Call the function to render the section
-renderBlogSection();
+// renderBlogSection();

@@ -55,7 +55,7 @@ function createProjectsSection() {
 
         // Create the image element
         const img = document.createElement('img');
-        img.src = item.photo;
+        img.src = `${baseApiUrl}/File/${item.photo}`; // `url(${baseApiUrl}/File/${item.photo})`
         img.className = 'img-fluid';
         img.alt = 'Project Image';
 
@@ -63,8 +63,8 @@ function createProjectsSection() {
         const textDiv = document.createElement('div');
         textDiv.className = 'text px-4';
         textDiv.innerHTML = `
-            <h3><a data-api="OlmaTechData.projects.name[${i}]">${item.title}</a></h3>
-            <span data-api="OlmaTechData.projects.description[${i}]">${item.category}</span>
+            <h3><a data-api="OlmaTechData.projects.name[${i}]">${item.name}</a></h3>
+            <span data-api="OlmaTechData.projects.description[${i}]">${item.description}</span>
         `;
 
         // Append image and text div to img div
@@ -105,4 +105,4 @@ async function renderProjectsSection() {
 }
 
 // Call the function to render the section
-renderProjectsSection();
+// renderProjectsSection();

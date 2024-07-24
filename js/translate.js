@@ -48,20 +48,26 @@ function updateContent(translations, language) {
                 case 'OlmaTechData.services.description':
                     value = OlmaTechData.services[index]?.description?.[language];
                     break;
-                case 'OlmaTechData.home.subtitle':
-                    value = OlmaTechData.home[index]?.subtitle?.[language];
+                case 'OlmaTechData.homes.subtitle':
+                    value = OlmaTechData.homes[index]?.subtitle?.[language];
                     break;
-                case 'OlmaTechData.home.description':
-                    value = OlmaTechData.home[index]?.description?.[language];
+                case 'OlmaTechData.homes.description':
+                    value = OlmaTechData.homes[index]?.description?.[language];
                     break;
-                case 'OlmaTechData.home.title':
-                    value = OlmaTechData.home[index]?.title?.[language];
+                case 'OlmaTechData.homes.title':
+                    value = OlmaTechData.homes[index]?.title?.[language];
                     break;
                 case 'OlmaTechData.blogs.title':
                     value = OlmaTechData.blogs[index]?.title?.[language];
                     break;
                 case 'OlmaTechData.blogs.description':
                     value = OlmaTechData.blogs[index]?.description?.[language];
+                    break;
+                case 'OlmaTechData.teams.position':
+                    value = OlmaTechData.teams[index]?.position?.[language];
+                    break;
+                case 'OlmaTechData.teams.firstname':
+                    value = OlmaTechData.teams[index]?.firstname?.[language];
                     break;
                 default:
                     console.log(baseKey, "DEFAULT");
