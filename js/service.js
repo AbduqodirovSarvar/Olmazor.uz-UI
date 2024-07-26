@@ -1,7 +1,5 @@
 import { OlmaTechData } from './api.js';
 
-const baseFileApiUrl = 'http://45.130.148.137:8080/api/File';
-
 export function createServicesSection() {
   try {
     if (!OlmaTechData) {
@@ -11,8 +9,6 @@ export function createServicesSection() {
     let services = OlmaTechData.services;
 
     const section = document.getElementById('services-section') || document.createElement('section');
-    section.className = 'ftco-section ftco-no-pb ftco-no-pt ftco-services bg-light';
-    section.id = 'services-section';
 
     const container = document.createElement('div');
     container.className = 'container';
@@ -82,7 +78,6 @@ export function createServicesSection() {
 
 export async function renderServicesSection() {
   try {
-    console.log('renderServicesSection');
     const section = createServicesSection();
     //document.body.appendChild(section); // Append to the body or a specific container
   } catch (error) {

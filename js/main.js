@@ -1,8 +1,13 @@
 import { setLanguage } from './translate.js';
 import { initializeData } from './api.js';
 import { renderHomeSection } from './home.js';
-// import { renderAboutSection } from './about.js'; 
-// import { renderServicesSection } from './service';
+import { renderAboutSection } from './about.js'; 
+import { renderServicesSection } from './service.js';
+import { renderBlogSection } from './blog.js';
+import { renderProjectsSection } from './project.js';
+import { renderStaffSection } from './team.js';
+import { renderFooter } from './footer.js';
+import { renderContactSection } from './contact.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
@@ -11,8 +16,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     await initializeData();
     await renderHomeSection();
-	// await renderServicesSection();
-	// await renderAboutSection();
+	  await renderServicesSection();
+    await renderProjectsSection();
+	  await renderAboutSection();
+    await renderStaffSection();
+    await renderBlogSection();
+    await renderContactSection();
+    await renderFooter();
+    
 
     // AOS initialization
     AOS.init({

@@ -72,6 +72,9 @@ function updateContent(translations, language) {
                 case 'OlmaTechData.teams.firstname':
                     value = OlmaTechData.teams[index]?.firstname?.[language];
                     break;
+                case 'OlmaTechData.teams.lastname':
+                    value = OlmaTechData.teams[index]?.lastname?.[language];
+                    break;
                 default:
                     console.log(baseKey, "DEFAULT");
                     break;
@@ -126,6 +129,8 @@ export function setLanguage(language) {
             document.getElementById('loader').style.display = 'none';
         });
 }
+
+window.setLanguage = setLanguage;
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {

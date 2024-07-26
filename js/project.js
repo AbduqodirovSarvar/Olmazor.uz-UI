@@ -1,12 +1,11 @@
 import { OlmaTechData } from "./api.js";
-function createProjectsSection() {
-    // Example data, replace this with your actual API call
+
+const baseApiUrl = 'http://45.130.148.137:8080/api';
+
+export async function renderProjectsSection() {
     const projects = OlmaTechData.projects;
 
-    // Create the section element
-    const section = document.createElement('section');
-    section.className = 'ftco-section ftco-project bg-light';
-    section.id = 'projects-section';
+    const section = document.getElementById('projects-section');
 
     // Create the container div
     const container = document.createElement('div');
@@ -40,11 +39,13 @@ function createProjectsSection() {
     const carousel = document.createElement('div');
     carousel.className = 'carousel-project owl-carousel';
 
+    // Declare i here
+    let i = 0;
+
     projects.forEach(item => {
         // Create the item div
         const itemDiv = document.createElement('div');
         itemDiv.className = 'item';
-        i = 0;
 
         // Create the project div
         const projectDiv = document.createElement('div');
@@ -80,6 +81,7 @@ function createProjectsSection() {
 
         // Append item div to carousel
         carousel.appendChild(itemDiv);
+
         i++;
     });
 
@@ -97,10 +99,4 @@ function createProjectsSection() {
     section.appendChild(container);
 
     return section;
-}
-
-// Function to render the section in the DOM
-async function renderProjectsSection() {
-    const section = createProjectsSection();
-    document.body.appendChild(section); // Append to the body or a specific container
 }

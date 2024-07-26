@@ -8,12 +8,9 @@ export function createAboutSection() {
       throw new Error('OlmaTechData is not initialized');
     }
 
-    console.log('Creating', OlmaTechData);
     let about = OlmaTechData.about;
 
-    const section = document.createElement('section');
-    section.className = 'ftco-counter img ftco-section ftco-no-pt ftco-no-pb';
-    section.id = 'about-section';
+    const section = document.getElementById('about-section');
 
     const container = document.createElement('div');
     container.className = 'container';
@@ -83,7 +80,6 @@ export function createAboutSection() {
 export async function renderAboutSection() {
   try {
     const section = createAboutSection();
-    document.body.appendChild(section);
   } catch (error) {
     console.error('Error rendering about section:', error);
   }

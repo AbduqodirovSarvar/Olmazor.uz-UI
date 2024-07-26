@@ -37,7 +37,7 @@
           <li class="nav-item"><a href="#services-section" class="nav-link"><span data-i18n="navbar.services">Services</span></a></li>
           <li class="nav-item"><a href="#projects-section" class="nav-link"><span data-i18n="navbar.projects">Projects</span></a></li>
           <li class="nav-item"><a href="#about-section" class="nav-link"><span data-i18n="navbar.about">About</span></a></li>
-          <li class="nav-item"><a href="#testimony-section" class="nav-link"><span data-i18n="navbar.clients">Clients</span></a></li>
+          <!-- <li class="nav-item"><a href="#testimony-section" class="nav-link"><span data-i18n="navbar.clients">Clients</span></a></li> -->
           <li class="nav-item"><a href="#blog-section" class="nav-link"><span data-i18n="navbar.blog">Blog</span></a></li>
           <li class="nav-item"><a href="#contact-section" class="nav-link"><span data-i18n="navbar.contact">Contact</span></a></li>
           <li class="nav-item dropdown">
@@ -64,140 +64,15 @@
 
 	<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section"></section>
 
-  <section class="ftco-section"></section>
+  <section class="ftco-section" id="staff-section"></section>
 
-	<section class="ftco-section testimony-section" id="testimony-section"></section>
+	<!-- <section class="ftco-section testimony-section" id="testimony-section"></section> -->
 
   <section class="ftco-section bg-light" id="blog-section"></section>
 
-	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-		<div class="container">
-		  <div class="row justify-content-center mb-5 pb-3">
-			<div class="col-md-7 heading-section text-center ftco-animate">
-			  <span class="subheading" data-i18n="contact.title">Contact</span>
-			  <h2 class="mb-4" data-i18n="contact.subtitle">Contact Us</h2>
-			  <p data-i18n="contact.description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-			</div>
-		  </div>
-		  <div class="row d-flex contact-info mb-5">
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-			  <div class="align-self-stretch box p-4 text-center">
-				<div class="icon d-flex align-items-center justify-content-center">
-				  <span class="icon-map-signs"></span>
-				</div>
-				<h3 class="mb-4" data-i18n="contact.address">Address</h3>
-				<p data-api="OlmaTechData.about.address">198 West 21th Street, Suite 721 New York NY 10016</p>
-			  </div>
-			</div>
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-			  <div class="align-self-stretch box p-4 text-center">
-				<div class="icon d-flex align-items-center justify-content-center">
-				  <span class="icon-phone2"></span>
-				</div>
-				<h3 class="mb-4" data-i18n="contact.number">Contact Number</h3>
-				<p><a href="tel://+998997215533">+998 99 721 5333</a></p>
-			  </div>
-			</div>
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-			  <div class="align-self-stretch box p-4 text-center">
-				<div class="icon d-flex align-items-center justify-content-center">
-				  <span class="icon-paper-plane">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-          </svg> -->
-          </span>
-				</div>
-				<h3 class="mb-4" data-i18n="contact.telegram">Telegram</h3>
-				<p><a href="https://t.me/olmatech_uz">t.me/olmatech_uz</a></p>
-			  </div>
-			</div>
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-			  <div class="align-self-stretch box p-4 text-center">
-				<div class="icon d-flex align-items-center justify-content-center">
-				  <span class="icon-globe"></span>
-				</div>
-				<h3 class="mb-4" data-i18n="contact.website">Website</h3>
-				<p><a href="https://olmatech.uz/">www.olmatech.uz</a></p>
-			  </div>
-			</div>
-		  </div>
-		  <div class="row no-gutters block-9">
-			<div class="col-md-6 order-md-last d-flex">
-			  <form id="contactForm" class="bg-light p-5 contact-form">
-				<div class="form-group">
-				  <input type="text" class="form-control" placeholder="Your Name" data-i18n-placeholder="contact.form.name">
-				</div>
-				<div class="form-group">
-				  <input type="text" class="form-control" placeholder="Your Email" data-i18n-placeholder="contact.form.email">
-				</div>
-				<div class="form-group">
-				  <input type="text" class="form-control" placeholder="Subject" data-i18n-placeholder="contact.form.subject">
-				</div>
-				<div class="form-group">
-				  <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message" data-i18n-placeholder="contact.form.message"></textarea>
-				</div>
-				<div class="form-group">
-				  <input type="submit" onclick="SendMessage()" class="btn btn-primary py-3 px-5" data-i18n="contact.form.send">
-				</div>
-			  </form>
-			</div>
-			<div class="col-md-6 d-flex">
-			  <div id="map" class="bg-white"></div>
-			</div>
-		  </div>
-		</div>
-	  </section>
-	  <!-- <script src="./js/map.js"></script> -->
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section"></section>
 
-    <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2" data-i18n="footer.about">About OlmaTech</h2>
-              <p data-api="OlmaTechData.about.description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/olmatech.uz"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2" data-i18n="footer.links">Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#home-section" data-i18n="navbar.home"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                <li><a href="#services-section" data-i18n="navbar.services"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
-                <li><a href="#about-section" data-i18n="navbar.about"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
-                <li><a href="#projects-section" data-i18n="navbar.projects"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
-                <li><a href="#testimony-section" data-i18n="navbar.clients"><span class="icon-long-arrow-right mr-2"></span>Clients</a></li>
-                <li><a href="#blog-section" data-i18n="navbar.blog"><span class="icon-long-arrow-right mr-2"></span>Blog</a></li>
-                <li><a href="#contact-section" data-i18n="navbar.contact"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2" data-i18n="footer.services">Services</h2>
-                <ul class="list-unstyled" id="services-list"></ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2" data-i18n="footer.questions">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text" data-api="OlmaTechData.about.address">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+998 99 721 5333</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">olmatech@gmail.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+  <div id="footer-placeholder"></div>
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen">
@@ -208,16 +83,18 @@
   </div>
 
   <script type="module" src="js/api.js"></script>
-  <script type="module" src="js/project.js"></script>	
-	<script type="module" src="js/about.js"></script>
-  <script type="module" src="js/team.js"></script>
-	<script type="module" src="js/blog.js"></script>
-  <script type="module" src="js/service.js"></script>
+  <script src="js/messageService.js"></script>
+  <!-- <script type="module" src="js/service.js"></script> -->
+  <!-- <script type="module" src="js/project.js"></script>	 -->
+	<!-- <script type="module" src="js/about.js"></script> -->
+  <!-- <script type="module" src="js/team.js"></script> -->
+	<!-- <script type="module" src="js/blog.js"></script> -->
   <script type="module" src="js/translate.js"></script>
   <script type="module" src="js/contact.js"></script>
-  <script type="module" src="js/footer.js"></script>
-  <script type="module" src="js/client.js"></script>
+  <!-- <script type="module" src="js/footer.js"></script> -->
+  <!-- <script type="module" src="js/client.js"></script> -->
 
+  <script src="js/map.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>

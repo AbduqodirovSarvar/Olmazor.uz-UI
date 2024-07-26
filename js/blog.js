@@ -1,12 +1,11 @@
 import { OlmaTechData } from "./api.js";
-async function createBlogSection() {
-    // Example data, replace with your API fetch logic
+
+const baseApiUrl = 'http://45.130.148.137:8080/api/File'; // Ensure this URL is correct
+
+export async function renderBlogSection() {
     const data = OlmaTechData.blogs;
 
-    // Create section element
-    const section = document.createElement('section');
-    section.className = 'ftco-section bg-light';
-    section.id = 'blog-section';
+    const section = document.getElementById('blog-section');
 
     // Create container div
     const container = document.createElement('div');
@@ -31,7 +30,7 @@ async function createBlogSection() {
     // Create row for blog entries
     const blogRow = document.createElement('div');
     blogRow.className = 'row d-flex';
-    i=0;
+    let i = 0;
 
     // Loop through blog entries data and create blog entry items
     data.forEach(entry => {
@@ -40,7 +39,7 @@ async function createBlogSection() {
 
         col.innerHTML = `
             <div class="blog-entry justify-content-end">
-                <a href="${entry.link}" class="block-20" style="background-image: url('${baseApiUrl}/File/${entry.photo}');"></a>
+                <a href="${entry.link}" class="block-20" style="background-image: url('${baseApiUrl}/${entry.photo}');"></a>
                 <div class="text mt-3 float-right d-block">
                     <div class="d-flex align-items-center pt-2 mb-4 topp">
                         <div class="one mr-2">
@@ -51,11 +50,10 @@ async function createBlogSection() {
                             <span class="mos">${entry.date.month}</span>
                         </div>
                     </div>
-                    <h3 class="heading"><a data-api="OlmaTechData.blogs.title[${i}]>${entry.title}</a></h3>
-                    <p data-api="OlmaTechData.blogs.description[${i}]>${entry.description}</p>
+                    <h3 class="heading"><a data-api="OlmaTechData.blogs.title[${i}]">${entry.title}</a></h3>
+                    <p data-api="OlmaTechData.blogs.description[${i}]">${entry.excerpt}</p>
                     <div class="d-flex align-items-center mt-4 meta">
                         <p class="ml-auto mb-0">
-                            <a href="#" class="mr-2"></a>
                         </p>
                     </div>
                 </div>
@@ -74,48 +72,4 @@ async function createBlogSection() {
     section.appendChild(container);
 
     return section;
-}
-
-// Example function to fetch data (replace with actual API call)
-async function fetchBlogData() {
-    // Example data, replace with your API call
-    return {
-        subheading: 'Blog',
-        heading: 'Our Blog',
-        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
-        entries: [
-            {
-                date: { day: '12', month: 'March', year: '2019' },
-                image: 'images/image_1.jpg',
-                title: 'Why Lead Generation is Key for Business Growth',
-                excerpt: 'A small river named Duden flows by their place and supplies it with the necessary regelialia.',
-                link: 'single.html',
-                author: 'Admin',
-                comments: 3
-            },
-            {
-                date: { day: '10', month: 'March', year: '2019' },
-                image: 'images/image_2.jpg',
-                title: 'Why Lead Generation is Key for Business Growth',
-                excerpt: 'A small river named Duden flows by their place and supplies it with the necessary regelialia.',
-                link: 'single.html',
-                author: 'Admin',
-                comments: 3
-            },
-            {
-                date: { day: '05', month: 'March', year: '2019' },
-                image: 'images/image_3.jpg',
-                title: 'Why Lead Generation is Key for Business Growth',
-                excerpt: 'A small river named Duden flows by their place and supplies it with the necessary regelialia.',
-                link: 'single.html',
-                author: 'Admin',
-                comments: 3
-            }
-        ]
-    };
-}
-
-async function renderBlogSection() {
-    const section = await createBlogSection();
-    document.body.appendChild(section);
 }
