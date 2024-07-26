@@ -1,6 +1,6 @@
+import { OlmaTechData, initializeData } from "./api.js";
 const languageKey = "olma-tech-language-code";
 
-// Function to update text and data content based on language
 function updateContent(translations, language) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
@@ -24,6 +24,10 @@ function updateContent(translations, language) {
         }
     });
 
+    if (!OlmaTechData) {
+        console.error('OlmaTechData is not initialized');
+        return;
+    }
     document.querySelectorAll('[data-api]').forEach(element => {
         const key = element.getAttribute('data-api');
         let value = null;
@@ -35,7 +39,6 @@ function updateContent(translations, language) {
             const index = parseInt(match[2], 10);
 
             switch (baseKey) {
-                // Projects
                 case 'OlmaTechData.projects.name':
                     value = OlmaTechData.projects[index]?.name?.[language];
                     break;
@@ -100,8 +103,8 @@ function updateContent(translations, language) {
     });
 }
 
-// Function to set the language and fetch translations
-function setLanguage(language) {
+
+export function setLanguage(language) {
     document.getElementById('loader').style.display = 'block';
 
     fetch(`/resource/${language}.json`)
@@ -114,30 +117,32 @@ function setLanguage(language) {
                 dropdownButton.textContent = translations['navbar']['language'];
             }
 
-            // Store the selected language in localStorage
             localStorage.setItem(languageKey, language);
 
-            // Hide loader
             document.getElementById('loader').style.display = 'none';
         })
         .catch(error => {
             console.error('Error loading language file:', error);
-            // Hide loader in case of error
             document.getElementById('loader').style.display = 'none';
         });
 }
 
-// Load the saved language on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem(languageKey) || 'ru';
-    setLanguage(savedLanguage);
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        await initializeData();
 
-    document.querySelectorAll('.dropdown-item').forEach(item => {
-        item.addEventListener('click', (event) => {
-            event.preventDefault();
-            const selectedLanguage = item.getAttribute('onclick').split("'")[1];
-            localStorage.setItem(languageKey, selectedLanguage);
-            setLanguage(selectedLanguage);
+        const savedLanguage = localStorage.getItem(languageKey) || 'ru';
+        setLanguage(savedLanguage);
+
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault();
+                const selectedLanguage = item.getAttribute('onclick').split("'")[1];
+                localStorage.setItem(languageKey, selectedLanguage);
+                setLanguage(selectedLanguage);
+            });
         });
-    });
+    } catch (error) {
+        console.error('Error initializing the application:', error);
+    }
 });

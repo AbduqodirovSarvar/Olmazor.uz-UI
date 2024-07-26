@@ -1,3 +1,4 @@
+import { OlmaTechData } from "./api.js";
 function createProjectsSection() {
     // Example data, replace this with your actual API call
     const projects = OlmaTechData.projects;
@@ -103,6 +104,3 @@ async function renderProjectsSection() {
     const section = createProjectsSection();
     document.body.appendChild(section); // Append to the body or a specific container
 }
-
-// Call the function to render the section
-// renderProjectsSection();

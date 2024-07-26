@@ -25,10 +25,9 @@
       <span class="sr-only">Loading...</span>
     </div>
   </div>
-  <script src="js/api.js"></script>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
     <div class="container">
-		<a class="navbar-brand" href="index.html">Olma<span>Tech</span></a>
+      <a class="navbar-brand" href="index.html">Olma<span>Tech</span></a>
       <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" data-i18n="head.menu">
         <span class="oi oi-menu" data-i18n="head.menu"></span>
       </button>
@@ -51,33 +50,25 @@
               <a class="dropdown-item" href="#" onclick="setLanguage('uzru')">Узбекча</a>
               <a class="dropdown-item" href="#" onclick="setLanguage('ru')">Русский</a>
             </div>
-          </ul>
-        </div>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <script src="/js/translate.js"></script>
+    </div>
+  </nav>
 	
-	<section id="home-section" class="hero"></section>
-		
-	<script src="./js/home.js"></script>
+	<section class="hero" id="home-section" ></section>
 
-    <section class="ftco-section ftco-no-pb ftco-no-pt ftco-services bg-light" id="services-section"></section>
-	<!-- <script src="./js/service.js"></script> -->
+  <section class="ftco-section ftco-no-pb ftco-no-pt ftco-services bg-light" id="services-section"></section>
 
-    <section class="ftco-section ftco-project bg-light" id="projects-section"></section>
-	<!-- <script src="./js/project.js"></script>	 -->
+  <section class="ftco-section ftco-project bg-light" id="projects-section"></section>
 
-		<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section"></section>
-	<!-- <script src="./js/about.js"></script> -->
+	<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section"></section>
 
-    <section class="ftco-section"></section>
-	<!-- <script src="./js/team.js"></script> -->
+  <section class="ftco-section"></section>
 
-	<!-- <section class="ftco-section testimony-section" id="testimony-section"></section>
-	<script src="./js/client.js"></script> -->
+	<section class="ftco-section testimony-section" id="testimony-section"></section>
 
-    <section class="ftco-section bg-light" id="blog-section"></section>
-	<!-- <script src="./js/blog.js"></script> -->
+  <section class="ftco-section bg-light" id="blog-section"></section>
 
 	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
 		<div class="container">
@@ -192,7 +183,6 @@
                 <ul class="list-unstyled" id="services-list"></ul>
             </div>
           </div>
-          <!-- <script src="js/footer.js"></script> -->
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
             	<h2 class="ftco-heading-2" data-i18n="footer.questions">Have a Questions?</h2>
@@ -217,7 +207,17 @@
     </svg>
   </div>
 
-  <script src="js/contact.js"></script>
+  <script type="module" src="js/api.js"></script>
+  <script type="module" src="js/project.js"></script>	
+	<script type="module" src="js/about.js"></script>
+  <script type="module" src="js/team.js"></script>
+	<script type="module" src="js/blog.js"></script>
+  <script type="module" src="js/service.js"></script>
+  <script type="module" src="js/translate.js"></script>
+  <script type="module" src="js/contact.js"></script>
+  <script type="module" src="js/footer.js"></script>
+  <script type="module" src="js/client.js"></script>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -234,6 +234,6 @@
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
   <!-- <script src="js/google-map.js"></script> -->
   
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

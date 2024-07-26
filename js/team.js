@@ -1,3 +1,4 @@
+import { OlmaTechData } from "./api.js";
 function createStaffSection() {
     let teams = OlmaTechData.teams;
 
@@ -74,6 +75,3 @@ async function renderStaffSection() {
     const section = createStaffSection();
     document.body.appendChild(section); // Append to the body or a specific container
 }
-
-// Call the function to render the section
-// renderStaffSection();

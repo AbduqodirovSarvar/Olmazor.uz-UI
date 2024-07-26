@@ -1,3 +1,4 @@
+import { OlmaTechData } from "./api.js";
 async function createBlogSection() {
     // Example data, replace with your API fetch logic
     const data = OlmaTechData.blogs;
@@ -114,11 +115,7 @@ async function fetchBlogData() {
     };
 }
 
-// Function to render the section in the DOM
 async function renderBlogSection() {
     const section = await createBlogSection();
-    document.body.appendChild(section); // Append to the body or a specific container
+    document.body.appendChild(section);
 }
-
-// Call the function to render the section
-// renderBlogSection();

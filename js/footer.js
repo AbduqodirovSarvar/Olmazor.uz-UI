@@ -1,3 +1,4 @@
+import { OlmaTechData } from "./api.js";
 async function renderServices() {
     try {
         let services = OlmaTechData.services;
@@ -17,5 +18,3 @@ async function renderServices() {
         console.error('Error rendering services:', error);
     }
 }
-
-renderServices();

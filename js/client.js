@@ -71,6 +71,3 @@ async function renderTestimonySection() {
     const section = await createTestimonySection();
     document.body.appendChild(section); // Append to the body or a specific container
 }
-
-// Call the function to render the section
-// renderTestimonySection();

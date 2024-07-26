@@ -1,4 +1,14 @@
-function createAboutSection(language) {
+import { OlmaTechData } from './api.js';
+
+const baseFileApiUrl = 'http://45.130.148.137:8080/api/File';
+
+export function createAboutSection() {
+  try {
+    if (!OlmaTechData) {
+      throw new Error('OlmaTechData is not initialized');
+    }
+
+    console.log('Creating', OlmaTechData);
     let about = OlmaTechData.about;
 
     const section = document.createElement('section');
@@ -16,7 +26,7 @@ function createAboutSection(language) {
 
     const imgDiv = document.createElement('div');
     imgDiv.className = 'img d-flex align-self-stretch align-items-center';
-    imgDiv.style.backgroundImage = `url(${baseApiUrl}/File/${about.photo})`;
+    imgDiv.style.backgroundImage = `url(${baseFileApiUrl}/${about.photo})`;
 
     imgCol.appendChild(imgDiv);
 
@@ -33,8 +43,8 @@ function createAboutSection(language) {
     headingCol.className = 'col-md-12 heading-section ftco-animate';
     headingCol.innerHTML = `
         <span class="subheading" data-i18n="about.title">${about.title}</span>
-        <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;" data-api="OlmaTechData.about.title">${about.title[language]}</h2>
-        <p data-api="OlmaTechData.about.description">${about.description[language]}</p>
+        <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;" data-api="OlmaTechData.about.title">${about.title}</h2>
+        <p data-api="OlmaTechData.about.description">${about.description}</p>
     `;
 
     headingRow.appendChild(headingCol);
@@ -63,14 +73,18 @@ function createAboutSection(language) {
     section.appendChild(container);
 
     return section;
+  } catch (error) {
+    console.error('Error creating about section:', error);
+    throw error;
+  }
 }
 
 // Function to render the About section in the DOM
-async function renderAboutSection() {
-    let language = localStorage.getItem(languageKey);
-    const section = createAboutSection(language);
+export async function renderAboutSection() {
+  try {
+    const section = createAboutSection();
     document.body.appendChild(section);
+  } catch (error) {
+    console.error('Error rendering about section:', error);
+  }
 }
-
-// Call the function to render the section
-// renderAboutSection();
