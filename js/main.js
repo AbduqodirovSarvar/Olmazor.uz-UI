@@ -11,9 +11,6 @@ import { renderContactSection } from './contact.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-	const savedLanguage = localStorage.getItem('olma-tech-language-code') || 'ru';
-    setLanguage(savedLanguage);
-
     await initializeData();
     await renderHomeSection();
 	  await renderServicesSection();
@@ -21,10 +18,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 	  await renderAboutSection();
     await renderStaffSection();
     await renderBlogSection();
-    await renderContactSection();
+    // await renderContactSection();
     await renderFooter();
     
-
+    const savedLanguage = localStorage.getItem('olma-tech-language-code') || 'ru';
+    setLanguage(savedLanguage);
     // AOS initialization
     AOS.init({
       duration: 800,

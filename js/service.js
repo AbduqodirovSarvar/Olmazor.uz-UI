@@ -44,7 +44,7 @@ export function createServicesSection() {
       navLink.setAttribute('aria-controls', `v-pills-${index + 1}`);
       navLink.setAttribute('aria-selected', isActive ? 'true' : 'false');
       navLink.setAttribute('data-api', `OlmaTechData.services.name[${index}]`);
-      navLink.innerHTML = `<span class="mr-3 ${item.icon}"></span> ${item.title}`;
+      navLink.innerHTML = `<span class="mr-3 ${item.icon}"></span> ${item.name['en']}`;
 
       nav.appendChild(navLink);
 
@@ -55,8 +55,8 @@ export function createServicesSection() {
       tabPane.setAttribute('aria-labelledby', `v-pills-${index + 1}-tab`);
       tabPane.innerHTML = `
         <span class="icon mb-3 d-block ${item.icon}"></span>
-        <h2 class="mb-4" data-api="OlmaTechData.services.name[${index}]">${item.name}</h2>
-        <p data-api="OlmaTechData.services.description[${index}]">${item.description}</p>
+        <h2 class="mb-4" data-api="OlmaTechData.services.name[${index}]">${item.name['en']}</h2>
+        <p data-api="OlmaTechData.services.description[${index}]">${item.description['en']}</p>
       `;
 
       tabContent.appendChild(tabPane);
@@ -79,7 +79,6 @@ export function createServicesSection() {
 export async function renderServicesSection() {
   try {
     const section = createServicesSection();
-    //document.body.appendChild(section); // Append to the body or a specific container
   } catch (error) {
     console.error('Error rendering services section:', error);
   }
