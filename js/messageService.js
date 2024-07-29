@@ -5,9 +5,19 @@ document.addEventListener('DOMContentLoaded', () => {
   
     contactForm.addEventListener('submit', async (event) => {
       event.preventDefault();
+      console.log(event);
   
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData.entries());
+      let messageFromName = document.getElementById('message-from-name').value;
+      let messageFromEmail = document.getElementById('message-from-email').value;
+      let messageSubject = document.getElementById('message-subject').value;
+      let messageText = document.getElementById('message-text').value;
+
+      const data = {
+        name: messageFromName,
+        email: messageFromEmail,
+        subject: messageSubject,
+        text: messageText
+      };
   
       try {
         const response = await fetch(apiUrl, {

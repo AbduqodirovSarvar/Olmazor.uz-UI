@@ -126,19 +126,19 @@
 			<div class="col-md-6 order-md-last d-flex">
 			  <form id="contactForm" class="bg-light p-5 contact-form">
 				<div class="form-group">
-				  <input type="text" class="form-control" placeholder="Your Name" data-i18n-placeholder="contact.form.name">
+				  <input type="text" id="message-from-name" class="form-control" placeholder="Your Name" data-i18n-placeholder="contact.form.name">
 				</div>
 				<div class="form-group">
-				  <input type="text" class="form-control" placeholder="Your Email" data-i18n-placeholder="contact.form.email">
+				  <input type="text" id="message-from-email" class="form-control" placeholder="Your Email" data-i18n-placeholder="contact.form.email">
 				</div>
 				<div class="form-group">
-				  <input type="text" class="form-control" placeholder="Subject" data-i18n-placeholder="contact.form.subject">
+				  <input type="text" id="message-subject" class="form-control" placeholder="Subject" data-i18n-placeholder="contact.form.subject">
 				</div>
 				<div class="form-group">
-				  <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message" data-i18n-placeholder="contact.form.message"></textarea>
+				  <textarea name="" id="message-text" cols="30" rows="7" class="form-control" placeholder="Message" data-i18n-placeholder="contact.form.message"></textarea>
 				</div>
 				<div class="form-group">
-				  <input type="submit" onclick="SendMessage()" class="btn btn-primary py-3 px-5" data-i18n="contact.form.send">
+				  <input type="submit" class="btn btn-primary py-3 px-5" data-i18n="contact.form.send">
 				</div>
 			  </form>
 			</div>

@@ -105,7 +105,7 @@ async function renderServices() {
         // Loop through the services and create list items
         services.forEach((service, i) => {
             const listItem = document.createElement('li');
-            listItem.innerHTML = `<a href="${service.link}" data-api="OlmaTechData.services.name[${i}]"><span class="icon-long-arrow-right mr-2"></span>${service.title}</a>`;
+            listItem.innerHTML = `<a data-api="OlmaTechData.services.name[${i}]"><span class="icon-long-arrow-right mr-2"></span>${service.title}</a>`;
             servicesList.appendChild(listItem);
         });
     } catch (error) {
