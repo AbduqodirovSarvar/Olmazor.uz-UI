@@ -55,16 +55,16 @@ export async function createHomeSection() {
 
       const subheading = document.createElement('span');
       subheading.className = 'subheading';
-      subheading.textContent = item.subtitle["en"];
+      // subheading.textContent = item.subtitle["en"];
       subheading.setAttribute('data-api', `OlmaTechData.homes.subtitle[${i}]`);
 
       const h1 = document.createElement('h1');
       h1.className = 'mb-4 mt-3';
-      h1.innerHTML = item.title["en"];
+      // h1.innerHTML = item.title["en"];
       h1.setAttribute('data-api', `OlmaTechData.homes.title[${i}]`);
 
       const p = document.createElement('p');
-      p.textContent = item.description["en"];
+      // p.textContent = item.description["en"];
       p.setAttribute('data-api', `OlmaTechData.homes.description[${i}]`);
 
       text.appendChild(subheading);
