@@ -8399,6 +8399,11 @@ h1, h2, h3, h4, h5,
               max-width: 50%;
               padding-left: 45px;
               padding-right: 3em; } }
+          @media (max-width: 768px) {
+            .owl-carousel.home-slider .slider-item .slider-text .subheading{
+              display: none !important;
+            }
+          }
         .owl-carousel.home-slider .slider-item .slider-text .subheading {
           color: #000000;
           font-weight: 600;
@@ -8431,16 +8436,19 @@ h1, h2, h3, h4, h5,
             font-weight: 900; }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text h1 {
+              display: none !important;
               color: #fff;
               font-size: 50px; } }
           @media (max-width: 767.98px) {
             .owl-carousel.home-slider .slider-item .slider-text h1 {
+              display: none !important;
               font-size: 40px; } }
         .owl-carousel.home-slider .slider-item .slider-text p {
           color: rgba(0, 0, 0, 0.8);
           font-weight: 400; }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text p {
+              display: none !important;
               color: rgba(255, 255, 255, 0.7);
               font-size: 23px; } }
     .owl-carousel.home-slider .owl-nav {
