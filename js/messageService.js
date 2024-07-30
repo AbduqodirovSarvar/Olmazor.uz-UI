@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         const result = await response.json();
         console.log('Form submitted successfully:', result);
+        alert('Your message has been sent successfully!');
       } catch (error) {
         console.error('Error submitting form:', error);
       }

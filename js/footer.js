@@ -21,9 +21,9 @@ export async function renderFooter() {
             <h2 class="ftco-heading-2" data-i18n="footer.about">About OlmaTech</h2>
             <p data-api="OlmaTechData.about.description">Far texts.</p>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/olmatech.uz"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="" id="footer-twitter-link"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="" id="footer-facebook-link"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/olmatech.uz" id="footer-instagram-link"><span class="icon-instagram"></span></a></li>
             </ul>
         </div>
     `;
@@ -68,8 +68,8 @@ export async function renderFooter() {
             <div class="block-23 mb-3">
                 <ul>
                     <li><span class="icon icon-map-marker"></span><span class="text" data-api="OlmaTechData.about.address">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                    <li><a href="#"><span class="icon icon-phone"></span><span class="text">+998 99 721 5333</span></a></li>
-                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">olmatech@gmail.com</span></a></li>
+                    <li><a href="" id="footer-phone-link"><span class="icon icon-phone"></span><span class="text">+998 99 721 5333</span></a></li>
+                    <li><a href="" id="footer-email-link"><span class="icon icon-envelope"></span><span class="text">olmatech@gmail.com</span></a></li>
                 </ul>
             </div>
         </div>

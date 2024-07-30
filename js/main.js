@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 	  await renderAboutSection();
     await renderStaffSection();
     await renderBlogSection();
-    // await renderContactSection();
     await renderFooter();
+    await renderContactSection();
     
     const savedLanguage = localStorage.getItem('olma-tech-language-code') || 'ru';
     setLanguage(savedLanguage);

@@ -56,7 +56,7 @@ export async function createHomeSection() {
       const subheading = document.createElement('span');
       subheading.className = 'subheading';
       subheading.textContent = item.subtitle["en"];
-      subheading.setAttribute('data-i18n', `OlmaTechData.homes.subtitle[${i}]`);
+      subheading.setAttribute('data-api', `OlmaTechData.homes.subtitle[${i}]`);
 
       const h1 = document.createElement('h1');
       h1.className = 'mb-4 mt-3';

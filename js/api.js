@@ -21,7 +21,6 @@ export async function fetchAllData() {
 export async function initializeData() {
   try {
     OlmaTechData = await fetchAllData();
-    console.log('OlmaTechData initialized:', OlmaTechData);
   } catch (error) {
     console.error('Error initializing OlmaTechData:', error);
   }
